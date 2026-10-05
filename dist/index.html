@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CampusMemory | Your campus, in one place</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+  <script type="module" crossorigin src="/assets/index-CGs21U6c.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DkUb2E1b.css">
+</head>
+
+<body>
+
+<div class="topline"><div class="wrap"><span><i class="live-dot"></i>THE CAMPUS INFORMATION DESK, REIMAGINED</span><span class="mono">CSMU / STUDENT EDITION / 2026</span></div></div>
+
+<header class="header"><div class="wrap navrow">
+
+<button class="brand" data-page="home" aria-label="CampusMemory home"><span class="brand-mark">CM</span><span class="brand-name">CampusMemory</span></button>
+
+<nav class="nav" aria-label="Main navigation">
+
+<button class="active" data-page="home">Home</button><button data-page="events">Events</button><button data-page="discuss">Discussions</button><button data-page="after">Certificates</button><button data-page="rooms">Free rooms</button><button data-page="admin" id="adminNav" hidden>Admin</button>
+
+</nav>
+
+<div class="header-actions"><button class="btn ask-nav" id="askNav">Ask Copilot ↗</button><button class="btn" id="loginNav">Log in</button><span id="userBadge" hidden></span></div>
+
+</div></header>
+
+<main>
+
+<section class="page active" id="page-home">
+
+<div class="wrap hero">
+
+<div><div class="eyebrow">Your campus, finally connected</div><h1>College life.<br>Less <em>searching.</em><br>More living.</h1><p class="hero-copy">Notices in one group. Deadlines in another. A poster buried under 87 messages. CampusMemory brings your campus information into one searchable, useful place.</p><div class="hero-buttons"><button class="btn btn-dark" data-page="events">Explore campus notices ↗</button><button class="btn" id="heroAsk">Ask Campus Copilot</button></div><div class="hero-note"><div class="avatar-stack"><span>A</span><span>C</span><span>+</span></div><span>One home for events, deadlines and student questions.</span></div></div>
+
+<div class="hero-art" aria-label="Campus event notice preview"><div class="art-backdrop"></div><article class="floating-card notice-preview"><div class="mini-top"><span>Campus notice / 001</span><span>↗</span></div><h3>Builders<br>Breakout.</h3><p>AWS Student Builder Hackathon<br>Bring an idea. Build something real.</p><span class="mini-tag">OPEN INNOVATION</span></article><article class="floating-card calendar-card"><div class="calendar-head"><span>UP NEXT / OCTOBER</span><span>↗</span></div><div class="calendar-date">06<span style="font-size:16px"> OCT</span></div><strong>AWS Student Builder Hackathon</strong><p>10:00 AM · Architecture Building</p></article><div class="stamp">LESS<br>SCROLLING.<br>MORE DOING.</div></div>
+
+</div>
+
+<div class="wrap"><div class="stats"><div class="stat"><strong id="statEvents">03</strong><span>Campus notices</span></div><div class="stat"><strong>01</strong><span>Searchable hub</span></div><div class="stat"><strong>24/7</strong><span>Find information</span></div><div class="stat"><strong>0</strong><span>More group chats needed</span></div></div></div>
+
+<div class="wrap section"><div class="section-top"><div><div class="eyebrow">Built for real student life</div><h2>Everything important.<br>Not everywhere.</h2></div><p>Less hunting through screenshots and forwarded PDFs. More knowing what is happening, when it happens, and where the original information came from.</p></div>
+
+<div class="feature-grid"><article class="feature"><span class="feature-num">01 / FIND</span><h3>Notices that make sense</h3><p>Search event titles, categories and venues. Turn a messy pile of campus updates into a clear, searchable noticeboard.</p><span class="feature-foot">→ Search, filter, discover</span></article><article class="feature"><span class="feature-num">02 / ASK</span><h3>A campus-aware copilot</h3><p>Ask plain-language questions about listed events. Answers are grounded in the notices available in this demo.</p><span class="feature-foot">→ Questions without the group chat</span></article><article class="feature"><span class="feature-num">03 / TAKE PART</span><h3>From notice to next step</h3><p>Open registration links, discuss campus topics, create a participation certificate preview and explore study spaces.</p><span class="feature-foot">→ Get on with campus life</span></article></div></div>
+
+<div class="dark-band"><div class="wrap"><div class="section-top"><div><div class="eyebrow">How the idea works</div><h2>From poster to<br>useful information.</h2></div><p>Designed around a simple promise: the answer should be easy to find, and the source should never be a mystery.</p></div><div class="pipeline"><article class="pipe"><span class="step">STEP 01</span><h3>Collect</h3><p>Notices and posters enter one central place.</p><small>PDF · PNG · JPG</small></article><article class="pipe"><span class="step">STEP 02</span><h3>Read</h3><p>Text extraction can identify the useful details.</p><small>OCR pipeline</small></article><article class="pipe"><span class="step">STEP 03</span><h3>Organise</h3><p>Titles, dates, categories and venues become searchable fields.</p><small>Structured notices</small></article><article class="pipe"><span class="step">STEP 04</span><h3>Answer</h3><p>Students search and get pointed back to the source notice.</p><small>Source-first answers</small></article></div></div></div>
+
+<div class="wrap section"><div class="section-top"><div><div class="eyebrow">Recently added</div><h2>On the campus radar.</h2></div><button class="btn" data-page="events">View all notices ↗</button></div><div class="event-grid" id="homeEvents"></div></div>
+
+</section>
+
+<section class="page" id="page-events"><div class="wrap"><div class="page-heading"><div class="eyebrow">The campus noticeboard</div><h1>Events & notices.</h1><p class="desc">The details you need, without the archaeology expedition through old messages.</p></div><div class="toolbar"><div class="search-wrap"><span>⌕</span><input id="eventSearch" type="search" placeholder="Search events, categories or venues…"></div><select id="categoryFilter" aria-label="Filter by category"><option>All categories</option></select><button class="btn" id="clearFilters">Clear filters</button></div><div class="event-grid" id="eventsGrid"></div></div></section>
+
+<section class="page" id="page-discuss"><div class="wrap"><div class="page-heading"><div class="eyebrow">Student community</div><h1>Open discussion.</h1><p class="desc">Ask the small questions, share useful context and make campus life a little less confusing.</p></div><div class="split"><form class="panel" id="threadForm"><h2>Start a discussion</h2><p>Keep it useful, respectful and relevant to campus life.</p><div class="field"><label for="threadTitle">Topic</label><input id="threadTitle" required maxlength="100" placeholder="e.g. Anyone joining the hackathon?"></div><div class="field"><label for="threadBody">Your message</label><textarea id="threadBody" required maxlength="700" placeholder="Add the details…"></textarea></div><div class="field"><label for="threadCategory">Category</label><select id="threadCategory"><option>General</option><option>Events</option><option>Academics</option><option>Campus life</option></select></div><button class="btn btn-dark" type="submit">Post discussion ↗</button><p class="demo-note">Demo mode: discussions are saved in this browser using local storage. This is not a shared campus forum.</p></form><div class="panel"><h2>Community board <span class="mono" style="font-size:11px;color:#888" id="threadCount"></span></h2><p>Conversation starters from the demo board.</p><div id="threadList"></div></div></div></div></section>
+
+<section class="page" id="page-after"><div class="wrap"><div class="page-heading"><div class="eyebrow">A little proof you showed up</div><h1>Certificate studio.</h1><p class="desc">Create a certificate preview for an event listed here. This is a locally generated demo, not an officially verified certificate.</p></div><div class="certificate-layout"><div class="panel"><h2>Personalise it</h2><p>Choose an eligible event and enter the name that should appear on the certificate.</p><div class="field"><label for="certName">Participant name</label><input id="certName" placeholder="Your full name" maxlength="70"></div><div class="field"><label for="certEvent">Event</label><select id="certEvent"></select></div><button class="btn btn-orange" id="downloadCert">Download certificate PNG ↗</button><p class="demo-note">The file is rendered in your browser. No certificate record is submitted or verified by the college.</p></div><div class="certificate" id="certificatePreview"><div class="cert-brand">CampusMemory / CSMU</div><h2>Certificate of Participation</h2><div class="cert-small">This certificate is a demo preview for</div><div class="cert-name" id="certPreviewName">Your Name</div><div class="cert-small" style="margin-top:17px">for taking part in</div><div class="cert-event" id="certPreviewEvent">Campus Event</div><div class="cert-small" id="certPreviewDate">Event date · Venue</div><div class="cert-small" style="margin-top:30px">DEMO PREVIEW · NOT AN OFFICIAL DOCUMENT</div></div></div></div></section>
+
+<section class="page" id="page-rooms"><div class="wrap"><div class="page-heading"><div class="eyebrow">A quiet corner on campus</div><h1>Free rooms & spaces.</h1><p class="desc">A sample space directory for the prototype. Availability shown here is illustrative, not live room-booking data.</p></div><div class="toolbar"><div class="search-wrap"><span>⌕</span><input id="roomSearch" type="search" placeholder="Search rooms, facilities or buildings…"></div><select id="roomStatus"><option value="all">All availability</option><option value="available">Available</option><option value="busy">In use</option></select></div><div class="rooms-grid" id="roomsGrid"></div></div></section>
+
+<section class="page" id="page-login"><div class="wrap"><div class="page-heading"><div class="eyebrow">Student access</div><h1>Welcome back.</h1><p class="desc">Sign in with your CampusMemory account.</p></div><div style="max-width:480px;padding-bottom:70px"><form class="panel" id="loginForm"><div class="field"><label for="loginEmail">Email</label><input id="loginEmail" type="email" required placeholder="student@csmu.ac.in" autocomplete="email"></div><div class="field"><label for="loginPassword">Password</label><input id="loginPassword" type="password" required placeholder="Your account password" autocomplete="current-password"></div><button class="btn btn-dark" type="submit" style="width:100%">Continue ↗</button><div class="demo-note">Secure sign-in powered by Supabase. Admin access is checked against the CampusMemory database.</div></form></div></div></section>
+
+<section class="page" id="page-admin">
+  <div class="wrap">
+    <div class="page-heading"><div class="eyebrow">Administrator workspace</div><h1>Manage campus notices.</h1><p class="desc">Create, update and remove the notices students see across CampusMemory. Changes are saved directly to Supabase.</p></div>
+    <div class="admin-stats">
+      <div class="admin-stat"><strong id="adminTotal">0</strong><span>Total notices</span></div>
+      <div class="admin-stat"><strong id="adminUpcoming">0</strong><span>Upcoming notices</span></div>
+      <div class="admin-stat"><strong id="adminCategories">0</strong><span>Categories</span></div>
+    </div>
+    <div class="admin-layout">
+      <form class="panel" id="noticeForm">
+        <h2 id="noticeFormTitle">Add a notice</h2><p>Enter the information from the official campus source.</p>
+        <input type="hidden" id="noticeId">
+        <div class="field"><label for="noticeTitle">Title *</label><input id="noticeTitle" required maxlength="180" placeholder="Event or notice title"></div>
+        <div class="field"><label for="noticeCategory">Category</label><input id="noticeCategory" maxlength="60" value="General" placeholder="Workshop, Hackathon, Fest"></div>
+        <div class="field"><label for="noticeDescription">Description</label><textarea id="noticeDescription" maxlength="3000" placeholder="Important details for students"></textarea></div>
+        <div class="field"><label for="noticeDate">Event date & time</label><input id="noticeDate" type="datetime-local"></div>
+        <div class="field"><label for="noticeDeadline">Registration deadline</label><input id="noticeDeadline" type="datetime-local"></div>
+        <div class="field"><label for="noticeVenue">Venue</label><input id="noticeVenue" maxlength="180" placeholder="Building / room / online"></div>
+        <div class="field"><label for="noticeLink">Registration URL</label><input id="noticeLink" type="url" placeholder="https://..."></div>
+        <div class="field"><label for="noticeSource">Source name</label><input id="noticeSource" maxlength="180" placeholder="Official notice / department"></div>
+        <div class="poster-upload-section">
+  <label class="field-label">POSTER IMAGE</label>
+
+  <label for="noticePoster" class="poster-upload-box" id="posterUploadBox">
+    <span class="poster-upload-icon">↑</span>
+    <strong>Click to upload a poster</strong>
+    <span>or choose an image from your device</span>
+    <small>JPG, PNG or WebP · Maximum 5 MB</small>
+  </label>
+
+  <input
+    type="file"
+    id="noticePoster"
+    accept="image/jpeg,image/png,image/webp"
+    hidden
+  />
+
+  <div id="posterPreviewContainer" class="poster-preview" hidden>
+    <img
+      id="posterPreview"
+      alt="Notice poster preview"
+    />
+    <div class="poster-preview-info">
+      <strong>Poster selected</strong>
+      <button type="button" id="removePosterBtn">Remove image</button>
+    </div>
+  </div>
+</div>
+      
+        <div class="admin-actions"><button class="btn btn-dark" type="submit" id="saveNoticeBtn">Save notice ↗</button><button class="btn" type="button" id="cancelNoticeEdit" hidden>Cancel edit</button></div>
+        <p class="demo-note">Only verified administrators can save changes. Supabase RLS remains the security boundary.</p>
+      </form>
+      <div class="panel"><div class="section-top"><div><h2>Existing notices</h2><p>Choose a notice to edit or delete.</p></div><button class="btn btn-small" type="button" id="refreshAdminNotices">Refresh</button></div><div class="admin-list" id="adminNoticeList"><p>Loading notices…</p></div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer"><div class="wrap"><span>© 2026 CampusMemory / Student-built prototype</span><span>Find the notice. Check the source. Get on with it.</span></div></footer>
+
+<button class="chat-launch" id="chatLaunch"><span>✳</span> Ask Campus Copilot</button>
+
+<aside class="chat-panel" id="chatPanel" aria-label="Campus Copilot chat"><div class="chat-head"><div><strong>Campus Copilot</strong><small>Answers from notices in this demo</small></div><button id="closeChat" aria-label="Close chat">×</button></div><div class="chat-messages" id="chatMessages"><div class="bubble">Hello! I’m CampusMemory. Ask me about listed campus events, registration links or deadlines.</div></div><div class="suggestions"><button data-question="What hackathons are listed?">Upcoming hackathons</button><button data-question="How do I register for the AWS hackathon?">Registration details</button></div><form class="chat-input" id="chatForm"><input id="chatInput" placeholder="Ask about campus notices…" autocomplete="off" required><button type="submit" aria-label="Send message">↑</button></form></aside>
+
+<div class="modal-backdrop" id="loginModal"><div class="modal"><button class="close" id="closeLogin" aria-label="Close">×</button><div class="eyebrow">Student access</div><h2>Log in to campus.</h2><p style="font-size:12px;color:var(--muted);line-height:1.7">Sign in securely to your CampusMemory account.</p><form id="modalLoginForm"><div class="field"><label for="modalEmail">Email</label><input id="modalEmail" required type="email" placeholder="student@csmu.ac.in"></div><div class="field"><label for="modalPassword">Password</label><input id="modalPassword" required type="password" placeholder="Your account password"></div><button class="btn btn-dark" type="submit" style="width:100%">Continue ↗</button></form><div class="demo-note">Your credentials are verified securely by Supabase Auth.</div></div></div>
+
+<div class="toast" id="toast" role="status"></div>
+
+
+</body>
+
+</html>
